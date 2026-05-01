@@ -11,30 +11,21 @@ const navLinks = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-function MediheartLogo({ className = "" }: { className?: string }) {
+function MediheartLogo({ className = "", scrolled = false }: { className?: string; scrolled?: boolean }) {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      <div className="relative w-9 h-9">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-          <path
-            d="M20 35C20 35 5 26 5 15C5 10.03 9.03 6 14 6C16.7 6 19.1 7.3 20 9C20.9 7.3 23.3 6 26 6C30.97 6 35 10.03 35 15C35 26 20 35 20 35Z"
-            fill="#8B1538"
-            stroke="#8B1538"
-            strokeWidth="1"
-          />
-          <polyline
-            points="10,18 14,18 16,12 18,24 21,14 23,20 26,20 29,18"
-            fill="none"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
+      <img
+        src="/logo.png"
+        alt="Mediheart logo"
+        className="w-10 h-10 object-contain"
+      />
       <div className="flex flex-col leading-none">
-        <span className="text-xl font-bold tracking-tight text-wine">Mediheart</span>
-        <span className="text-[10px] font-medium text-gray-500 tracking-wide">S. de R.L de C.V.</span>
+        <span className={`text-xl font-bold tracking-tight ${scrolled ? "text-wine" : "text-white"}`}>
+          Mediheart
+        </span>
+        <span className={`text-[10px] font-medium tracking-wide ${scrolled ? "text-gray-500" : "text-white/60"}`}>
+          S. de R.L de C.V.
+        </span>
       </div>
     </div>
   );
@@ -87,7 +78,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <a href="#inicio" onClick={(e) => handleNavClick(e, "#inicio")}>
-              <MediheartLogo />
+              <MediheartLogo scrolled={isScrolled} />
             </a>
 
             {/* Desktop Nav */}

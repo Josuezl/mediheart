@@ -98,21 +98,7 @@ export default function AboutUs() {
                 <div className="col-span-2 p-6 bg-gradient-wine rounded-2xl text-white">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                      <svg viewBox="0 0 40 40" className="w-6 h-6" fill="none">
-                        <path
-                          d="M20 35C20 35 5 26 5 15C5 10.03 9.03 6 14 6C16.7 6 19.1 7.3 20 9C20.9 7.3 23.3 6 26 6C30.97 6 35 10.03 35 15C35 26 20 35 20 35Z"
-                          fill="white"
-                          fillOpacity="0.9"
-                        />
-                        <polyline
-                          points="10,18 14,18 16,12 18,24 21,14 23,20 26,20 29,18"
-                          fill="none"
-                          stroke="#8B1538"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <img src="/logo.png" alt="Mediheart" className="w-7 h-7 object-contain" />
                     </div>
                     <span className="font-bold text-lg">Mediheart</span>
                   </div>
@@ -126,8 +112,6 @@ export default function AboutUs() {
                 {[
                   { num: "4+", label: "Años en el mercado" },
                   { num: "5", label: "Áreas de especialización" },
-                  { num: "ONCAE", label: "Certificados" },
-                  { num: "IHSS", label: "En proceso" },
                 ].map((stat) => (
                   <div
                     key={stat.label}

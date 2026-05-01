@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   keywords:
     "dispositivos médicos, cardiología, cardiología intervencionista, Honduras, San Pedro Sula, electrofisiología, intervencionismo estructural",
   authors: [{ name: "Mediheart S. de R.L de C.V." }],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Mediheart | Innovación Cardiovascular en Honduras",
     description:

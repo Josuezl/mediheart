@@ -3,11 +3,10 @@
 import { useEffect, useRef } from "react";
 import {
   MapPin,
-  ShieldCheck,
   Award,
   TrendingUp,
   Building2,
-  FileCheck,
+  ShieldCheck,
 } from "lucide-react";
 import Card from "./ui/Card";
 
@@ -23,18 +22,6 @@ const stats = [
     value: "SPS",
     label: "San Pedro Sula",
     description: "Operamos en Cortés, norte de Honduras",
-  },
-  {
-    icon: ShieldCheck,
-    value: "ONCAE",
-    label: "Certificados",
-    description: "Permiso activo como proveedores del Estado",
-  },
-  {
-    icon: FileCheck,
-    value: "IHSS",
-    label: "En proceso",
-    description: "Avanzando en aprobación con Seguro Social",
   },
 ];
 
@@ -95,7 +82,7 @@ export default function Coverage() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-2 gap-4 mb-16 max-w-xl mx-auto w-full">
           {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
@@ -147,14 +134,6 @@ export default function Coverage() {
                   title: "Preparación regulatoria",
                   desc: "Procesos internos alineados con requisitos sanitarios y regulatorios del mercado hondureño.",
                 },
-                {
-                  title: "Registro ONCAE activo",
-                  desc: "Permiso vigente de la Oficina Normativa de Contratación y Adquisiciones del Estado de Honduras.",
-                },
-                {
-                  title: "Proceso IHSS en curso",
-                  desc: "Avanzando activamente en el proceso de aprobación con el Instituto Hondureño de Seguridad Social.",
-                },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -201,21 +180,6 @@ export default function Coverage() {
               );
             })}
 
-            {/* Map card */}
-            <div className="p-5 rounded-2xl bg-gradient-hero text-white">
-              <div className="flex items-center gap-3 mb-2">
-                <MapPin size={20} className="text-pink-300" />
-                <span className="font-bold">Ubicación principal</span>
-              </div>
-              <p className="text-white/80 text-sm">
-                Col. Trejo, 10 Cl. 23 Ave.
-                <br />
-                San Pedro Sula, Cortés, Honduras
-              </p>
-              <div className="mt-3 text-xs text-white/60">
-                Región norte de Honduras · Expansión escalonada planificada
-              </div>
-            </div>
           </div>
         </div>
       </div>

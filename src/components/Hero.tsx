@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function EcgAnimation() {
   return (
@@ -25,38 +25,13 @@ function EcgAnimation() {
 
 function HeroHeart() {
   return (
-    <div className="relative">
+    <div className="relative flex items-center justify-center">
       <div className="absolute inset-0 rounded-full bg-wine/20 blur-3xl scale-150 animate-pulse-slow" />
-      <svg
-        viewBox="0 0 200 190"
-        className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 heartbeat drop-shadow-2xl"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#c42050" />
-            <stop offset="100%" stopColor="#8B1538" />
-          </linearGradient>
-          <filter id="heartShadow">
-            <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#8B1538" floodOpacity="0.5" />
-          </filter>
-        </defs>
-        <path
-          d="M100 175 C100 175 20 125 20 65 C20 37 42 16 70 16 C84 16 96 23 100 32 C104 23 116 16 130 16 C158 16 180 37 180 65 C180 125 100 175 100 175Z"
-          fill="url(#heartGrad)"
-          filter="url(#heartShadow)"
-        />
-        <polyline
-          points="55,90 70,90 78,65 88,115 97,70 105,90 115,90 128,80"
-          fill="none"
-          stroke="white"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          opacity="0.95"
-        />
-        <circle cx="100" cy="90" r="2" fill="white" opacity="0.6" />
-      </svg>
+      <img
+        src="/logo.png"
+        alt="Mediheart"
+        className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 heartbeat drop-shadow-2xl object-contain"
+      />
     </div>
   );
 }
@@ -116,11 +91,6 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text content */}
           <div className="text-center lg:text-left">
-            <div className="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm font-medium mb-6 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Disponibles en San Pedro Sula, Honduras
-            </div>
-
             <h1 className="reveal text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
               Innovación{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-red-300">
@@ -150,11 +120,10 @@ export default function Hero() {
               </button>
 
               <a
-                href="tel:+50494374827"
+                href="mailto:info@medihearthn.com"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-200 backdrop-blur-sm text-base"
               >
-                <Phone size={18} />
-                +504 9437-4827
+                info@medihearthn.com
               </a>
             </div>
 
@@ -162,8 +131,8 @@ export default function Hero() {
             <div className="reveal mt-12 flex flex-wrap gap-6 justify-center lg:justify-start">
               {[
                 { value: "4+", label: "Años de experiencia" },
-                { value: "ONCAE", label: "Certificados" },
                 { value: "5", label: "Áreas de especialización" },
+                { value: "SPS", label: "San Pedro Sula, Honduras" },
               ].map((badge) => (
                 <div key={badge.label} className="text-center">
                   <div className="text-2xl font-black text-white">{badge.value}</div>
