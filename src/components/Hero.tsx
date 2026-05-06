@@ -30,7 +30,11 @@ function HeroHeart() {
       <img
         src="/logo.png"
         alt="Mediheart"
-        className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 heartbeat drop-shadow-2xl object-contain"
+        className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 heartbeat object-contain"
+        style={{
+          filter:
+            "drop-shadow(6px 0 0 white) drop-shadow(-6px 0 0 white) drop-shadow(0 6px 0 white) drop-shadow(0 -6px 0 white) drop-shadow(5px 5px 0 white) drop-shadow(-5px -5px 0 white) drop-shadow(5px -5px 0 white) drop-shadow(-5px 5px 0 white)",
+        }}
       />
     </div>
   );
