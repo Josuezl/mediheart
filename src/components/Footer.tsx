@@ -39,11 +39,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-5">
-              <img
-                src="/logo.png"
-                alt="Mediheart logo"
-                className="w-10 h-10 object-contain"
-              />
+              <div className="w-11 h-11 rounded-xl bg-white/90 flex items-center justify-center flex-shrink-0">
+                <img
+                  src="/logo.png"
+                  alt="Mediheart logo"
+                  className="w-9 h-9 object-contain"
+                />
+              </div>
               <div>
                 <div className="text-xl font-bold text-white">Mediheart</div>
                 <div className="text-xs text-gray-500">S. de R.L de C.V.</div>

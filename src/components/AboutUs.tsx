@@ -97,7 +97,7 @@ export default function AboutUs() {
               <div className="relative grid grid-cols-2 gap-4">
                 <div className="col-span-2 p-6 bg-gradient-wine rounded-2xl text-white">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-white/90 flex items-center justify-center">
                       <img src="/logo.png" alt="Mediheart" className="w-7 h-7 object-contain" />
                     </div>
                     <span className="font-bold text-lg">Mediheart</span>
