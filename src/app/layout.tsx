@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://medihearthn.com"),
   title: "Mediheart S. de R.L de C.V. | Dispositivos Médicos Cardiovasculares",
   description:
     "Empresa hondureña especializada en comercialización y distribución de dispositivos médicos para cardiología intervencionista en San Pedro Sula, Honduras. Más de 4 años de experiencia.",
@@ -45,7 +45,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
-        <Analytics />
       </body>
     </html>
   );
